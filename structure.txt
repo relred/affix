@@ -1,0 +1,21 @@
+Article: belongsTo -> user
+
+title
+description
+body
+imageUrl
+videoUrl
+
+category
+is_public
+is_cover
+
+
+
+User : hasMany -> article
+
+name
+email
+password
+role
+
