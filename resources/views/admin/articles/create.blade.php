@@ -10,17 +10,6 @@
 
 
                 <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-                    <div class="main-container">
-                        <div class="editor-container editor-container_inline-editor editor-container_include-block-toolbar" id="editor-container">
-                            <div class="editor-container__editor"><div id="editor"></div></div>
-                        </div>
-                    </div>
-
                     <form method="POST" action="{{ route('articles.store') }}">
                         @csrf
                         <div class="mb-3">

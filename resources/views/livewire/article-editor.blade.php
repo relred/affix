@@ -1,7 +1,7 @@
 <div class="main-container">
-    <h1>{{ $title }}</h1>
     <div class="editor-container editor-container_inline-editor" id="editor-container">
         <div class="editor-container__editor">
+            <h1>{{ $title }}</h1>
             <div id="editor" wire:ignore></div>
         </div>
     </div>

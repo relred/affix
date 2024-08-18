@@ -28,12 +28,6 @@
         <div class="card">
           <div class="card-header">Información de articulo</div>
             <div class="card-body">
-                <div class="main-container">
-                    <div class="editor-container editor-container_inline-editor editor-container_include-block-toolbar" id="editor-container">
-                        <div class="editor-container__editor"><div id="editor"></div></div>
-                    </div>
-                </div>
-
                 <img src="{{ $article->imageUrl }}" alt="" style="max-width: 70%; display: block; margin: 0 auto;">
 
                 
