@@ -18,6 +18,13 @@
         <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
         <!-- Custom styles for this template -->
         <link href="blog.css" rel="stylesheet">
+        <style>
+            body {
+                background-image: url('https://i.postimg.cc/LsVDW4FJ/Whats-App-Image-2024-08-20-at-18-26-16.jpg');
+                background-size: cover;
+                background-attachment: fixed;
+            }
+          </style>
     </head>
     <body>
         @yield("content")

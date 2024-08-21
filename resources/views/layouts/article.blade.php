@@ -55,5 +55,6 @@
     <body>
         <x-navbar/>
         @yield("content")
+        <x-responsive-nav/>
     </body>
 </html>

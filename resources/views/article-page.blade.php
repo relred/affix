@@ -10,7 +10,7 @@
 @endsection
 
 @section('description')
-    Niclas
+    {{ $article->description }}
 @endsection
 
 @section('imageUrl')

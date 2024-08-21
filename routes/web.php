@@ -12,9 +12,9 @@ Route::put('articles/{article}/update-content', [ArticleController::class, 'upda
 
 Route::get('/', [BulletinController::class, 'index'])->name('bulletin');
 
-Route::get('/a', function () {
-    return view('article-page');
-});
+/* Route::get('/a', function () {
+    return view('test');
+}); */
 
 Auth::routes([
     'register' => false,
