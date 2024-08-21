@@ -24,7 +24,7 @@
       <a class="nav-item nav-link text-white fs-5 fw-bold" href="#">Tienda</a>
       <a class="nav-item nav-link text-white fs-5 fw-bold" href="#">Noticias</a>
       <a class="nav-item nav-link text-white fs-5 fw-bold" href="#">Reportajes Especiales</a>
-      <a class="nav-item nav-link text-white fs-5 fw-bold" href="#">Conclusiones</a>
+      <a class="nav-item nav-link text-white fs-5 fw-bold" href="#">Ecosistemas</a>
     </nav>
   </div>
   

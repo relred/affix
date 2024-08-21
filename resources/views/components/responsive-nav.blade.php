@@ -13,7 +13,7 @@
             <li class="mb-4"><a href="#" class="text-white text-decoration-none fs-3 fw-bold">Tienda</a></li>
             <li class="mb-4"><a href="#" class="text-white text-decoration-none fs-3 fw-bold">Noticias</a></li>
             <li class="mb-4"><a href="#" class="text-white text-decoration-none fs-3 fw-bold">Reportajes Especiales</a></li>
-            <li class="mb-4"><a href="#" class="text-white text-decoration-none fs-3 fw-bold">Conclusiones</a></li>
+            <li class="mb-4"><a href="#" class="text-white text-decoration-none fs-3 fw-bold">Ecosistemas</a></li>
           </ul>
     </div>
 </div>
