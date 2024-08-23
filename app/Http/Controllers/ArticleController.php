@@ -8,7 +8,6 @@ use App\Models\Article;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use CloudinaryLabs\CloudinaryLaravel\Facades\Cloudinary;
 
 class ArticleController extends Controller
 {
@@ -44,6 +43,7 @@ class ArticleController extends Controller
     public function show(string $slug)
     {
         $article = Article::findBySlug($slug);
+
         return view('article-page', compact('article'));
     }
 
@@ -53,6 +53,7 @@ class ArticleController extends Controller
     public function edit(string $id)
     {
         $article = Article::findOrFail($id);
+
         return view('admin.articles.edit', compact('article'));
     }
 
@@ -101,13 +102,13 @@ class ArticleController extends Controller
             ->with('status', 'Contenido Actualizado exitosamente');
     }
 
-    public function updateVisibility($id): RedirectResponse 
+    public function updateVisibility($id): RedirectResponse
     {
         $article = Article::findOrFail($id);
-        $article->is_public = !$article->is_public;
+        $article->is_public = ! $article->is_public;
         $article->save();
 
-        return redirect()->route('articles.edit',$id)->with('status', 'Visibilidad actualizada con éxito');
+        return redirect()->route('articles.edit', $id)->with('status', 'Visibilidad actualizada con éxito');
     }
 
     /**

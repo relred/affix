@@ -1,6 +1,6 @@
 <div id="featuredArticlesCarousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
-      @foreach($feed as $index => $article)
+      @foreach($carousel as $index => $article)
         <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
           <x-cover 
           slug="{{ $article->slug }}"

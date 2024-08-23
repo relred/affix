@@ -10,7 +10,7 @@
 
 <main class="container">
 
-<x-carousel.body :$feed/>
+  <x-carousel.body :$carousel/>
 
   <div style="margin: auto; max-width:900px;">
     <div class="">

@@ -9,13 +9,11 @@ use Illuminate\View\Component;
 class ArticleCard extends Component
 {
     public string $date;
+
     /**
      * Create a new component instance.
      */
-    public function __construct(public $article)
-    {
-
-    }
+    public function __construct(public $article) {}
 
     /**
      * Get the view / contents that represent the component.

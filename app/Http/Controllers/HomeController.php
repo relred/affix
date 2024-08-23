@@ -24,6 +24,7 @@ class HomeController extends Controller
     public function index()
     {
         $articles = Article::latest()->take(24)->get();
+
         return view('admin.index', compact('articles'));
     }
 }

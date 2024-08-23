@@ -2,15 +2,15 @@
 
 namespace App\Livewire;
 
-use App\Models\Article;
 use Livewire\Component;
 
 class ArticleEditor extends Component
 {
     public $article;
-    public $title;
-    public $body;
 
+    public $title;
+
+    public $body;
 
     public function mount()
     {
@@ -18,7 +18,7 @@ class ArticleEditor extends Component
 
         if ($this->article->body) {
             $this->body = $this->article->body;
-        }else{
+        } else {
             $this->body = '';
         }
     }

@@ -17,9 +17,8 @@ class BulletinController extends Controller
     public function index(): View
     {
         $feed = $this->articleService->getLatestFeed();
-        $cover = $this->articleService->getCoverArticle();
-        $highlights = $this->articleService->getHighlightArticles();
+        $carousel = $this->articleService->getCarouselArticles();
 
-        return view('home', compact('feed', 'cover', 'highlights'));
+        return view('home', compact('feed', 'carousel'));
     }
 }
