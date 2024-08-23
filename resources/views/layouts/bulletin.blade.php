@@ -23,6 +23,7 @@
                 background-image: url('https://i.postimg.cc/LsVDW4FJ/Whats-App-Image-2024-08-20-at-18-26-16.jpg');
                 background-size: cover;
                 background-attachment: fixed;
+                padding-bottom: 20vh;
             }
           </style>
     </head>

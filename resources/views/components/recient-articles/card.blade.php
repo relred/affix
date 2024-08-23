@@ -12,14 +12,14 @@
     object-fit: cover;
     }
 
-    @media (min-width: 992px) {  /* This is typically the 'lg' breakpoint */
+    @media (min-width: 992px) {
     .image-container {
         width: 200px;
         height: 150px;
     }
     
     .content-container {
-        width: calc(100% - 200px - 1rem);  /* Subtracting image width and gap */
+        width: calc(100% - 200px - 1rem);
     }
     }
 </style>
