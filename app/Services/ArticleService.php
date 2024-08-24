@@ -24,11 +24,10 @@ class ArticleService
         }
 
         if ($config->cover_ids) {
-            $coverIds = json_decode($config->cover_ids, true);
-
+            $coverIds = $config->cover_ids;
             return Article::whereIn('id', $coverIds)
                 ->where('is_public', 1)
-                ->orderByRaw('FIELD(id, '.implode(',', $coverIds).')')
+                ->orderByRaw("FIELD(id, " . implode(',', $coverIds) . ")")
                 ->get();
         }
 
