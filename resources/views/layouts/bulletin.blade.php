@@ -13,16 +13,15 @@
         <!-- Scripts -->
         @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
-        <!-- Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id={{ env('GA_MEASUREMENT_ID') }}"></script>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-2JKKHPJ2HK"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
-            gtag('config', '{{ env('GA_MEASUREMENT_ID') }}');
+            gtag('config', 'G-2JKKHPJ2HK');
         </script>
-        <!-- End Google Analytics -->
         
         <!-- Custom styles for this template -->
         <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
