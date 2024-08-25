@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Configuration;
-use Illuminate\View\View;
 use App\Services\ArticleService;
+use Illuminate\Http\Request;
 
 class CarouselArticleController extends Controller
 {
@@ -15,18 +14,19 @@ class CarouselArticleController extends Controller
     {
         $this->articleService = $articleService;
     }
-    
+
     public function index()
     {
         $config = Configuration::first();
 
         $latest = $this->articleService->getLatestFeed();
 
-        if (!$config->is_cover_automatic) {
+        if (! $config->is_cover_automatic) {
             //logic
         }
 
         $carousel = $this->articleService->getCarouselArticles();
+
         return view('admin.carousel-controls', compact('carousel', 'latest'));
 
     }

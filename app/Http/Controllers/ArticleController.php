@@ -75,7 +75,7 @@ class ArticleController extends Controller
         $article->description = $validatedRequest['description'];
         if (isset($validatedRequest['category'])) {
             $article->category = $validatedRequest['category'];
-        }        
+        }
         $article->save();
 
         return redirect()->route('articles.edit', $id)->with('status', 'Información actualizada con éxito');
