@@ -16,16 +16,18 @@ class CarouselArticleController extends Controller
         $this->articleService = $articleService;
     }
     
-    public function index(): View
+    public function index()
     {
         $config = Configuration::first();
 
         $latest = $this->articleService->getLatestFeed();
 
         if (!$config->is_cover_automatic) {
-            $carousel = $this->articleService->getCarouselArticles();
-            return view('admin.carousel-controls', compact('carousel', 'latest'));
+            //logic
         }
+
+        $carousel = $this->articleService->getCarouselArticles();
+        return view('admin.carousel-controls', compact('carousel', 'latest'));
 
     }
 
