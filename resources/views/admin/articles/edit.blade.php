@@ -57,6 +57,7 @@
                       <option selected disabled>Seleccione una categoria</option>
                       <option value="{{ Category::IS_AFFIX_PLAY }}" {{ $article->category == Category::IS_AFFIX_PLAY ? 'selected' : '' }}>Affix Play</option>
                       <option value="{{ Category::IS_REDEX }}" {{ $article->category == Category::IS_REDEX ? 'selected' : '' }}>Redex</option>
+                      <option value="{{ Category::IS_SPORTS }}" {{ $article->category == Category::IS_SPORTS ? 'selected' : '' }}>Deportes</option>
                       <option value="{{ Category::IS_LIVE }}" {{ $article->category == Category::IS_LIVE ? 'selected' : '' }}>En Vivo</option>
                       <option value="{{ Category::IS_SEPCIAL_REPORT }}" {{ $article->category == Category::IS_SEPCIAL_REPORT ? 'selected' : '' }}>Reportajes Especiales</option>
                       <option value="{{ Category::IS_ECOSYSTEM }}" {{ $article->category == Category::IS_ECOSYSTEM ? 'selected' : '' }}>Ecosistemas</option>
