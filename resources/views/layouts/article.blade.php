@@ -13,20 +13,20 @@
         <link rel="canonical" href="@yield('canonical')">
         <meta name="title" content="@yield('title')">
         <meta name="description" content="@yield('description')">
-        <meta property="og:site_name" content="YouTube">
-        <meta property="og:url" content="@yield('videoUrl')">
+        <meta property="og:site_name" content="Affix">
+{{--         <meta property="og:url" content="@yield('videoUrl')"> --}}
         <meta property="og:title" content="@yield('title')">
         <meta property="og:image" content="@yield('imageUrl')">
         <meta property="og:image:width" content="1280">
         <meta property="og:image:height" content="720">
         <meta property="og:description" content="@yield('description')">
-        <meta property="og:type" content="video.other">
+{{--        <meta property="og:type" content="video.other">
         <meta property="og:video:url" content="@yield('embedUrl')">
         <meta property="og:video:secure_url" content="@yield('embedUrl')">
-        <meta property="og:video:type" content="text/html">
+        <meta property="og:video:type" content="text/html"> --}}
         <meta property="og:video:width" content="1280">
         <meta property="og:video:height" content="720">
-        <div id="watch7-content" class="watch-main-col" itemscope itemid="" itemtype="http://schema.org/VideoObject">
+{{--         <div id="watch7-content" class="watch-main-col" itemscope itemid="" itemtype="http://schema.org/VideoObject">
             <link itemprop="url" href="@yield('videoUrl')">
             <meta itemprop="name" content="@yield('title')">
             <meta itemprop="description" content="@yield('description')">
@@ -40,7 +40,7 @@
             <meta itemprop="playerType" content="HTML5 Flash">
             <meta itemprop="width" content="1280">
             <meta itemprop="height" content="720">
-        </div>
+        </div> --}}
 
 
         <!-- Scripts -->

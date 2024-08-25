@@ -1,9 +1,7 @@
 @extends('layouts.article')
 
 
-@section('canonical')
-
-@endsection
+@section('canonical'){{ url()->current() }}@endsection
 
 @section('title'){{ $article->title }}@endsection
 
