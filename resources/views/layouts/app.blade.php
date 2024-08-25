@@ -35,7 +35,8 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
-
+                        <a href="{{ route('admin') }}" class="mx-2 nav-link {{ Request::route()->getName() == 'admin' ? 'border-bottom border-2 border-dark fw-bold' : 'border-bottom border-2' }}">Administrar artículos</a>
+                        <a href="{{ route('carousel.index') }}" class="mx-2 nav-link {{ Request::route()->getName() == 'carousel.index' ? 'border-bottom border-2 border-dark fw-bold' : 'border-bottom border-2' }}">Carrusel</a>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
