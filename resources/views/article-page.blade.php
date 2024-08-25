@@ -14,6 +14,7 @@
 @endsection
 
 @section('imageUrl')
+    {{ $article->imageUrl }}
 @endsection
 
 @section('videoUrl')
