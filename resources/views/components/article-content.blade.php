@@ -12,7 +12,7 @@
     <h3 class="pb-2 mb-2 fst-italic">
 {{--       Internacional --}}
     </h3>
-    <p class="blog-post-meta" style="text-transform: capitalize">{{ $date }} Por {{ $article->user->name }}</p>
+    <p class="blog-post-meta" style="text-transform: capitalize">{{ $date }}</p>
     {!! $article->body !!}
     </article>
 
