@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+@use('App\Models\Category')
 <div class="container">
     <div class="row justify-content-center">
       <div class="col-md-6">
@@ -50,15 +51,16 @@
                     <input type="file" class="form-control" id="image" name="image" accept="image/*">
                     <div class="form-text">Seleccione un archivo de imagen (jpg, png, webp) de un tamaño menor a 1 megabyte.</div>
                   </div>
-
                   <div class="mb-3">
                     <label for="category" class="form-label">Categoria</label>
                     <select class="form-select" id="category" name="category" aria-label="Select category">
                       <option selected disabled>Seleccione una categoria</option>
-                      <option value="1" {{ $article->category == '1' ? 'selected' : '' }}>Politica</option>
-                      <option value="2" {{ $article->category == '2' ? 'selected' : '' }}>Nacional</option>
-                      <option value="3" {{ $article->category == '3' ? 'selected' : '' }}>Internacional</option>
-                      <option value="4" {{ $article->category == '4' ? 'selected' : '' }}>Estatal</option>
+                      <option value="{{ Category::IS_AFFIX_PLAY }}" {{ $article->category == Category::IS_AFFIX_PLAY ? 'selected' : '' }}>Affix Play</option>
+                      <option value="{{ Category::IS_REDEX }}" {{ $article->category == Category::IS_REDEX ? 'selected' : '' }}>Redex</option>
+                      <option value="{{ Category::IS_LIVE }}" {{ $article->category == Category::IS_LIVE ? 'selected' : '' }}>En Vivo</option>
+                      <option value="{{ Category::IS_SEPCIAL_REPORT }}" {{ $article->category == Category::IS_SEPCIAL_REPORT ? 'selected' : '' }}>Reportajes Especiales</option>
+                      <option value="{{ Category::IS_ECOSYSTEM }}" {{ $article->category == Category::IS_ECOSYSTEM ? 'selected' : '' }}>Ecosistemas</option>
+                      <option value="{{ Category::IS_NEWS }}" {{ $article->category == Category::IS_NEWS ? 'selected' : '' }}>Noticias</option>
                     </select>
                   </div>
                   <button type="submit" class="btn btn-primary">Actualizar</button>

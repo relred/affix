@@ -6,14 +6,14 @@
     <div class="offcanvas-body">
         <ul class="list-unstyled text-center">
             <li class="mb-4"><a href="{{ route('bulletin') }}" class="text-white text-decoration-none fs-3 fw-bold">Inicio</a></li>
-            <li class="mb-4"><a href="#" class="text-white text-decoration-none fs-3 fw-bold">Affix Play</a></li>
-            <li class="mb-4"><a href="#" class="text-white text-decoration-none fs-3 fw-bold">Redex</a></li>
-            <li class="mb-4"><a href="#" class="text-white text-decoration-none fs-3 fw-bold">Deportes</a></li>
-            <li class="mb-4"><a href="#" class="text-white text-decoration-none fs-3 fw-bold">En Vivo</a></li>
+            <li class="mb-4"><a href="{{ route('category.show', 'affix-play') }}" class="text-white text-decoration-none fs-3 fw-bold">Affix Play</a></li>
+            <li class="mb-4"><a href="{{ route('category.show', 'redex') }}" class="text-white text-decoration-none fs-3 fw-bold">Redex</a></li>
+            <li class="mb-4"><a href="{{ route('category.show', 'deportes') }}" class="text-white text-decoration-none fs-3 fw-bold">Deportes</a></li>
+            <li class="mb-4"><a href="{{ route('category.show', 'en-vivo') }}" class="text-white text-decoration-none fs-3 fw-bold">En Vivo</a></li>
             <li class="mb-4"><a href="#" class="text-white text-decoration-none fs-3 fw-bold">Tienda</a></li>
-            <li class="mb-4"><a href="#" class="text-white text-decoration-none fs-3 fw-bold">Noticias</a></li>
-            <li class="mb-4"><a href="#" class="text-white text-decoration-none fs-3 fw-bold">Reportajes Especiales</a></li>
-            <li class="mb-4"><a href="#" class="text-white text-decoration-none fs-3 fw-bold">Ecosistemas</a></li>
+            <li class="mb-4"><a href="{{ route('category.show', 'noticias') }}" class="text-white text-decoration-none fs-3 fw-bold">Noticias</a></li>
+            <li class="mb-4"><a href="{{ route('category.show', 'reportajes-especiales') }}" class="text-white text-decoration-none fs-3 fw-bold">Reportajes Especiales</a></li>
+            <li class="mb-4"><a href="{{ route('category.show', 'ecosistemas') }}" class="text-white text-decoration-none fs-3 fw-bold">Ecosistemas</a></li>
           </ul>
     </div>
 </div>

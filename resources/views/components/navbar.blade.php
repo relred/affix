@@ -1,5 +1,7 @@
 <div class="sticky-top bg-black">
 
+  @use('App\Models\Category')
+
   <header class="border-bottom py-3 text-center d-flex justify-content-between align-items-center">
     <button class="btn btn-link d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#responsiveNavbar" aria-controls="offcanvasWithBothOptions" aria-expanded="false" aria-label="Toggle navigation">
       <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -17,14 +19,14 @@
   <div class="nav-scroller py-1 mb-3 border-bottom d-none d-lg-block">
     <nav class="nav nav-underline justify-content-between container">
       <a class="nav-item nav-link text-white fs-5 fw-bold" href="{{ route('bulletin') }}">Inicio</a>
-      <a class="nav-item nav-link text-white fs-5 fw-bold" href="#">Affix Play</a>
-      <a class="nav-item nav-link text-white fs-5 fw-bold" href="#">Redex</a>
-      <a class="nav-item nav-link text-white fs-5 fw-bold" href="#">Deportes</a>
-      <a class="nav-item nav-link text-white fs-5 fw-bold" href="#">En Vivo</a>
+      <a class="nav-item nav-link text-white fs-5 fw-bold" href="{{ route('category.show', 'affix-play') }}">Affix Play</a>
+      <a class="nav-item nav-link text-white fs-5 fw-bold" href="{{ route('category.show', 'redex') }}">Redex</a>
+      <a class="nav-item nav-link text-white fs-5 fw-bold" href="{{ route('category.show', 'deportes') }}">Deportes</a>
+      <a class="nav-item nav-link text-white fs-5 fw-bold" href="{{ route('category.show', 'en-vivo') }}">En Vivo</a>
       <a class="nav-item nav-link text-white fs-5 fw-bold" href="#">Tienda</a>
-      <a class="nav-item nav-link text-white fs-5 fw-bold" href="#">Noticias</a>
-      <a class="nav-item nav-link text-white fs-5 fw-bold" href="#">Reportajes Especiales</a>
-      <a class="nav-item nav-link text-white fs-5 fw-bold" href="#">Ecosistemas</a>
+      <a class="nav-item nav-link text-white fs-5 fw-bold" href="{{ route('category.show', 'noticias') }}">Noticias</a>
+      <a class="nav-item nav-link text-white fs-5 fw-bold" href="{{ route('category.show', 'reportajes-especiales') }}">Reportajes Especiales</a>
+      <a class="nav-item nav-link text-white fs-5 fw-bold" href="{{ route('category.show', 'ecosistemas') }}">Ecosistemas</a>
     </nav>
   </div>
   
