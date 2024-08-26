@@ -1,0 +1,19 @@
+{
+    "name": "Affix",
+    "short_name": "Affix",
+    "icons": [
+        {
+            "src": "https://res.cloudinary.com/de6hiq5n4/image/upload/v1724703608/affix/assets/icons/android-chrome-192x192.png",
+            "sizes": "192x192",
+               "type": "image/png"
+        },
+        {
+            "src": "https://res.cloudinary.com/de6hiq5n4/image/upload/v1724703609/affix/assets/icons/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#203951",
+    "background_color": "#ffffff",
+    "display": "standalone"
+}
