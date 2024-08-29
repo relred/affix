@@ -31,4 +31,10 @@ class Article extends Model
             ->generateSlugsFrom('title')
             ->saveSlugsTo('slug');
     }
+
+    public function getCategoryName(): String 
+    {
+        return Category::find($this->category)->name;
+    }
+
 }
