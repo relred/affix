@@ -29,43 +29,62 @@
         <div class="card">
           <div class="card-header">Información de articulo</div>
             <div class="card-body">
-                <img src="{{ $article->imageUrl }}" alt="" style="max-width: 70%; display: block; margin: 0 auto;">
+              <div class="row mb-3">
+                @if ($article->imageUrl)
+                  <div class="col-md-6 text-center">
+                      <p>Encabezado</p>
+                      <img class="img-thumbnail" src="{{ $article->imageUrl }}" style="max-height: 300px; max-width: 300px;">
+                  </div>                  
+                @endif
+                @if ($article->cover_image)
+                  <div class="col-md-6 text-center">
+                      <p>Portada</p>
+                      <img class="img-thumbnail" src="{{ $article->cover_image }}" style="max-height: 300px; max-width: 300px;">
+                  </div>                  
+                @endif
+              </div>
 
-                
-                <form method="POST" action="{{ route('articles.update', $article->id) }}" enctype="multipart/form-data">
+              <form method="POST" action="{{ route('articles.update', $article->id) }}" enctype="multipart/form-data">
 
-                  @csrf
-                  @method('PUT')
-                  <div class="mb-3">
-                    <label for="title" class="form-label">Titulo</label>
-                    <input type="text" class="form-control" id="title" name="title" value="{{ $article->title }}" required>
-                  </div>
+                @csrf
+                @method('PUT')
+                <div class="mb-3">
+                  <label for="title" class="form-label">Titulo</label>
+                  <input type="text" class="form-control" id="title" name="title" value="{{ $article->title }}" required>
+                </div>
 
-                  <div class="mb-3">
-                    <label for="description" class="form-label">Descripcion</label>
-                    <textarea class="form-control" id="description" name="description" >{{ $article->description }}</textarea>
-                  </div>
+                <div class="mb-3">
+                  <label for="description" class="form-label">Descripcion</label>
+                  <textarea class="form-control" id="description" name="description" >{{ $article->description }}</textarea>
+                </div>
 
-                  <div class="mb-3">
-                    <label for="image" class="form-label">Imagen de encabezado</label>
-                    <input type="file" class="form-control" id="image" name="image" accept="image/*">
-                    <div class="form-text">Seleccione un archivo de imagen (jpg, png, webp) de un tamaño menor a 1 megabyte.</div>
-                  </div>
-                  <div class="mb-3">
-                    <label for="category" class="form-label">Categoria</label>
-                    <select class="form-select" id="category" name="category" aria-label="Select category">
-                      <option selected disabled>Seleccione una categoria</option>
-                      <option value="{{ Category::IS_AFFIX_PLAY }}" {{ $article->category == Category::IS_AFFIX_PLAY ? 'selected' : '' }}>Affix Play</option>
-                      <option value="{{ Category::IS_REDEX }}" {{ $article->category == Category::IS_REDEX ? 'selected' : '' }}>Redex</option>
-                      <option value="{{ Category::IS_SPORTS }}" {{ $article->category == Category::IS_SPORTS ? 'selected' : '' }}>Deportes</option>
-                      <option value="{{ Category::IS_LIVE }}" {{ $article->category == Category::IS_LIVE ? 'selected' : '' }}>En Vivo</option>
-                      <option value="{{ Category::IS_SEPCIAL_REPORT }}" {{ $article->category == Category::IS_SEPCIAL_REPORT ? 'selected' : '' }}>Reportajes Especiales</option>
-                      <option value="{{ Category::IS_ECOSYSTEM }}" {{ $article->category == Category::IS_ECOSYSTEM ? 'selected' : '' }}>Ecosistemas</option>
-                      <option value="{{ Category::IS_NEWS }}" {{ $article->category == Category::IS_NEWS ? 'selected' : '' }}>Noticias</option>
-                    </select>
-                  </div>
-                  <button type="submit" class="btn btn-primary">Actualizar</button>
-                </form>
+                <div class="mb-3">
+                  <label for="cover" class="form-label">Imagen de portada</label>
+                  <input type="file" class="form-control" id="cover" name="cover" accept="image/*">
+                  <div class="form-text">Seleccione un archivo de imagen (jpg, png, webp) de un tamaño menor a 1 megabyte.</div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="image" class="form-label">Imagen de encabezado</label>
+                  <input type="file" class="form-control" id="image" name="image" accept="image/*">
+                  <div class="form-text">Seleccione un archivo de imagen (jpg, png, webp) de un tamaño menor a 1 megabyte.</div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="category" class="form-label">Categoria</label>
+                  <select class="form-select" id="category" name="category" aria-label="Select category">
+                    <option selected disabled>Seleccione una categoria</option>
+                    <option value="{{ Category::IS_AFFIX_PLAY }}" {{ $article->category == Category::IS_AFFIX_PLAY ? 'selected' : '' }}>Affix Play</option>
+                    <option value="{{ Category::IS_REDEX }}" {{ $article->category == Category::IS_REDEX ? 'selected' : '' }}>Redex</option>
+                    <option value="{{ Category::IS_SPORTS }}" {{ $article->category == Category::IS_SPORTS ? 'selected' : '' }}>Deportes</option>
+                    <option value="{{ Category::IS_LIVE }}" {{ $article->category == Category::IS_LIVE ? 'selected' : '' }}>En Vivo</option>
+                    <option value="{{ Category::IS_SEPCIAL_REPORT }}" {{ $article->category == Category::IS_SEPCIAL_REPORT ? 'selected' : '' }}>Reportajes Especiales</option>
+                    <option value="{{ Category::IS_ECOSYSTEM }}" {{ $article->category == Category::IS_ECOSYSTEM ? 'selected' : '' }}>Ecosistemas</option>
+                    <option value="{{ Category::IS_NEWS }}" {{ $article->category == Category::IS_NEWS ? 'selected' : '' }}>Noticias</option>
+                  </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Actualizar</button>
+              </form>
             </div>
         </div>
       </div>

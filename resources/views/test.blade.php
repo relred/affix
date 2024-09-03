@@ -5,24 +5,60 @@
 @endsection
 
 @section("content")
-    
+<style>
+  .news-card {
+      transition: transform 0.3s;
+      cursor: pointer;
+      height: 100%;
+  }
+  .news-card:hover {
+      transform: scale(1.04);
+  }
+  .card-img-overlay {
+      background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0) 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+  }
+  .category {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 0.8rem;
+  }
+  .card-img {
+      object-fit: cover;
+      height: 100%;
+  }
+  .row {
+      justify-content: center;
+  }
+  .col {
+      padding: 0 5px;
+  }
+  @media (min-width: 992px) {
+      .newscard-container {
+          max-width: 548px;
+      }
+      .news-card {
+          width: 264px;
+      }
+      .card-img {
+          height: 396px;
+      }
+  }
+</style>
+
   <x-navbar/>
 
-<main class="container">
-  <div style="height: 2000px; padding-top: 100px;">
-    <h1 class="text-center">Contenidos de sitio</h1>
-  </div>
-  <x-responsive-nav/>
-</main>
+<div class="container newscard-container py-4">
+    <div class="row row-cols-1 row-cols-md-2 g-3">
 
-<footer class="py-5 text-center text-body-secondary bg-body-tertiary">
-  <p class="mb-0">
-    <a style="text-decoration: none" class="text-black" href="#">
-      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-big-up-filled" width="44" height="44" viewBox="0 0 24 24" stroke-width="2.5" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round">
-        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-        <path d="M10.586 3l-6.586 6.586a2 2 0 0 0 -.434 2.18l.068 .145a2 2 0 0 0 1.78 1.089h2.586v7a2 2 0 0 0 2 2h4l.15 -.005a2 2 0 0 0 1.85 -1.995l-.001 -7h2.587a2 2 0 0 0 1.414 -3.414l-6.586 -6.586a2 2 0 0 0 -2.828 0z" stroke-width="0" fill="currentColor" />
-      </svg>
-    </a>
-  </p>
-</footer>
+    </div>
+</div>
+
 @endsection

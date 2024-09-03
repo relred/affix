@@ -71,6 +71,12 @@ class ArticleController extends Controller
             $article->imageUrl = $storedImage->getSecurePath();
         }
 
+        if ($request->hasFile('cover')) {
+            $storedImage = $request->file('cover')->storeOnCloudinary('affix');
+            $article->cover_image = $storedImage->getSecurePath();
+        }
+
+
         $article->title = $validatedRequest['title'];
         $article->description = $validatedRequest['description'];
         if (isset($validatedRequest['category'])) {
