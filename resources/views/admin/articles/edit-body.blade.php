@@ -10,7 +10,10 @@
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
 
-        <link rel="stylesheet" href="https://cdn.ckeditor.com/ckeditor5/43.0.0/ckeditor5.css" />
+{{--         <link rel="stylesheet" href="//unpkg.com/jodit@4.1.16/es2021/jodit.min.css">
+        <script src="//unpkg.com/jodit@4.1.16/es2021/jodit.min.js"></script> --}}
+        @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+
         <!-- Styles -->
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap');
@@ -28,13 +31,18 @@
                 margin-right: auto;
             }
 
-            .ck-content {
+/*             .ck-content {
                 font-family: 'Lato';
                 line-height: 1.6;
                 word-break: break-word;
             }
 
             .editor-container_inline-editor .editor-container__editor {
+                min-width: 795px;
+                max-width: 795px;
+            } */
+
+            .editor {
                 min-width: 795px;
                 max-width: 795px;
             }

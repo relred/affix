@@ -12,6 +12,7 @@
         "laravel/tinker": "^2.9",
         "laravel/ui": "^4.5",
         "livewire/livewire": "^3.5",
+        "mantix/livewire-jodit-text-editor": "^1.6",
         "spatie/laravel-sluggable": "^3.6"
     },
     "require-dev": {
